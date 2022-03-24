@@ -1,9 +1,9 @@
 {
 	"name": "@peerpiper/iframe-wallet-sveltekit",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev --port 8089",
-		"build": "npm --prefix ../../ run build && node svelte-build-before.js && svelte-kit build && node svelte-build-after.js",
+		"build": "svelte-kit build",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
@@ -31,6 +31,6 @@
 	"dependencies": {
 		"arverify": "^0.0.11",
 		"immortal-db": "^1.1.0",
-		"@peerpiper/iframe-wallet-engine": "github:peerpiper/iframe-wallet-engine"
+		"@peerpiper/iframe-wallet-engine": "github:peerpiper/iframe-wallet-engine#135864c41841ea48846eefa772d09b4bae2699d7"
 	}
 }
