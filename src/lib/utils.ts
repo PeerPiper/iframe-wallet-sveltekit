@@ -1,0 +1,12 @@
+export const shorten = (key: string, start = 6, end = 6) => {
+	if (key.length < start + end + 3) return key;
+	return key.slice(0, start) + '...' + key.slice(key.length - end, key.length);
+};
+
+export const shortenURL = (key: string) => {
+	const tail = 30;
+	const start = 'https://'.length; // key.slice(start, Math.min(start, 8)) +
+	const end = Math.max(key.length - tail, 0);
+	const maybeEllips = key.length > tail ? '..' : '';
+	return maybeEllips + key.slice(end, key.length);
+};
