@@ -1,6 +1,6 @@
 {
 	"name": "@peerpiper/iframe-wallet-sveltekit",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"scripts": {
 		"dev": "svelte-kit dev --port 8089",
 		"build": "svelte-kit build",
@@ -31,6 +31,6 @@
 	"dependencies": {
 		"arverify": "^0.0.11",
 		"immortal-db": "^1.1.0",
-		"@peerpiper/iframe-wallet-engine": "github:peerpiper/iframe-wallet-engine#135864c41841ea48846eefa772d09b4bae2699d7"
+		"@peerpiper/iframe-wallet-engine": "github:peerpiper/iframe-wallet-engine"
 	}
 }
