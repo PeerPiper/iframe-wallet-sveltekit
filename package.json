@@ -1,6 +1,6 @@
 {
-	"name": "@peerpiper/iframe-wallet-frontend-sveltekit",
-	"version": "0.0.3",
+	"name": "@peerpiper/iframe-wallet-sveltekit",
+	"version": "1.0.0",
 	"scripts": {
 		"dev": "svelte-kit dev --port 8089",
 		"build": "npm --prefix ../../ run build && node svelte-build-before.js && svelte-kit build && node svelte-build-after.js",
