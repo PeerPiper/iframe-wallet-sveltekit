@@ -15,6 +15,9 @@ const config = {
 			pages: 'docs',
 			assets: 'docs'
 		}),
+		prerender: {
+			default: true // creates index.html on build folder
+		},
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '/iframe-wallet-sveltekit' : ''
 		},
