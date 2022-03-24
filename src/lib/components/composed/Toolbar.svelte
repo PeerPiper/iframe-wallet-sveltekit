@@ -46,14 +46,14 @@
 <template>
 	<nav class="toolbar box no-scrollbar" id="nav">
 		<div class="icon controls">
-			<a href="/">
+			<a href="./">
 				<img src={logo} class="shadow" alt="PeerPiper Home" />
 			</a>
 		</div>
 		<div class="wallets">
 			{#if Wallets?.length > 0}
 				{#each Wallets as wallet, i}
-					<a href="/{navTo}/{wallet.id}/{$page.url.search}">
+					<a href="./{navTo}/{wallet.id}/{$page.url.search}">
 						<button
 							type="button"
 							on:click={select(wallet)}
@@ -75,7 +75,7 @@
 				{#if Connect?.connectors?.length}
 					<div name="fade-fast" transition:fade>
 						<a
-							href="/connect"
+							href="./connect"
 							class:verticalLayout={$verticalLayout}
 							class="icon control"
 							aria-label="Add Wallet"
@@ -85,7 +85,7 @@
 					</div>
 				{/if}
 				<a
-					href="/add"
+					href="./add"
 					class:verticalLayout={$verticalLayout}
 					class="icon control"
 					aria-label="Add Wallet"
@@ -93,7 +93,7 @@
 					<img src={IconAddBox} class="small" alt="Add Wallet" />
 				</a>
 				<a
-					href="/settings"
+					href="./settings"
 					class:verticalLayout={$verticalLayout}
 					class="icon control"
 					aria-label="Settings"
