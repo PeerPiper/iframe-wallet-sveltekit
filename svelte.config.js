@@ -12,13 +12,11 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			pages: '../../docs',
-			assets: '../../docs'
+			pages: 'docs',
+			assets: 'docs'
 		}),
 		paths: {
-			// import.meta.env.DEV // doesn't work :/
-			// process.env.NODE_ENV // doesn't work :/
-			base: dev ? '' : '/iframe-wallet-engine'
+			base: process.env.NODE_ENV === 'production' ? '/iframe-wallet-sveltekit' : ''
 		},
 		vite: {
 			build: {
