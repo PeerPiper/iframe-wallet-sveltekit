@@ -615,7 +615,7 @@ function create_each_block(ctx) {
       toggle_class(button, "router-link-active", ctx[14].id == ctx[6] && ctx[0]);
       toggle_class(button, "accent", !ctx[0]);
       toggle_class(button, "active", ctx[14].id == ctx[6] && ctx[0]);
-      attr(a, "href", a_href_value = "/" + ctx[9] + "/" + ctx[14].id + "/" + ctx[2].url.search);
+      attr(a, "href", a_href_value = "./" + ctx[9] + "/" + ctx[14].id + "/" + ctx[2].url.search);
     },
     m(target, anchor) {
       insert_hydration(target, a, anchor);
@@ -646,7 +646,7 @@ function create_each_block(ctx) {
       if (dirty & 321) {
         toggle_class(button, "active", ctx[14].id == ctx[6] && ctx[0]);
       }
-      if (!current || dirty & 4 && a_href_value !== (a_href_value = "/" + ctx[9] + "/" + ctx[14].id + "/" + ctx[2].url.search)) {
+      if (!current || dirty & 4 && a_href_value !== (a_href_value = "./" + ctx[9] + "/" + ctx[14].id + "/" + ctx[2].url.search)) {
         attr(a, "href", a_href_value);
       }
     },
@@ -727,7 +727,7 @@ function create_if_block$1(ctx) {
         attr(img0, "src", img0_src_value);
       attr(img0, "class", "small svelte-1m4dvx3");
       attr(img0, "alt", "Add Wallet");
-      attr(a0, "href", "/add");
+      attr(a0, "href", "./add");
       attr(a0, "class", "icon control svelte-1m4dvx3");
       attr(a0, "aria-label", "Add Wallet");
       toggle_class(a0, "verticalLayout", ctx[1]);
@@ -735,7 +735,7 @@ function create_if_block$1(ctx) {
         attr(img1, "src", img1_src_value);
       attr(img1, "class", "small svelte-1m4dvx3");
       attr(img1, "alt", "Settings");
-      attr(a1, "href", "/settings");
+      attr(a1, "href", "./settings");
       attr(a1, "class", "icon control svelte-1m4dvx3");
       attr(a1, "aria-label", "Settings");
       toggle_class(a1, "verticalLayout", ctx[1]);
@@ -825,7 +825,7 @@ function create_if_block_1$1(ctx) {
         attr(img, "src", img_src_value);
       attr(img, "class", "small svelte-1m4dvx3");
       attr(img, "alt", "Connections");
-      attr(a, "href", "/connect");
+      attr(a, "href", "./connect");
       attr(a, "class", "icon control svelte-1m4dvx3");
       attr(a, "aria-label", "Add Wallet");
       toggle_class(a, "verticalLayout", ctx[1]);
@@ -928,7 +928,7 @@ function create_fragment$1(ctx) {
         attr(img, "src", img_src_value);
       attr(img, "class", "shadow svelte-1m4dvx3");
       attr(img, "alt", "PeerPiper Home");
-      attr(a, "href", "/");
+      attr(a, "href", "./");
       attr(div0, "class", "icon controls svelte-1m4dvx3");
       attr(div1, "class", "wallets svelte-1m4dvx3");
       attr(nav, "class", "toolbar box no-scrollbar svelte-1m4dvx3");
@@ -1328,4 +1328,4 @@ class _layout extends SvelteComponent {
   }
 }
 export { _layout as default };
-//# sourceMappingURL=__layout.svelte-e37d7663.js.map
+//# sourceMappingURL=__layout.svelte-22fc70da.js.map
