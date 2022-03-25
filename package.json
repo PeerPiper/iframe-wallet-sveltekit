@@ -16,7 +16,7 @@
 		"@rollup/pluginutils": "^4.1.2",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-static": "^1.0.0-next.26",
-		"@sveltejs/kit": "next",
+		"@sveltejs/kit": "^1.0.0-next.303",
 		"mitt": "^3.0.0",
 		"prettier": "^2.4.1",
 		"prettier-plugin-svelte": "^2.4.0",
@@ -29,8 +29,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@peerpiper/iframe-wallet-engine": "github:peerpiper/iframe-wallet-engine",
 		"arverify": "^0.0.11",
-		"immortal-db": "^1.1.0",
-		"@peerpiper/iframe-wallet-engine": "github:peerpiper/iframe-wallet-engine"
+		"immortal-db": "^1.1.0"
 	}
 }
