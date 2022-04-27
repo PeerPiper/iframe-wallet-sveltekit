@@ -25,8 +25,10 @@
 									? 'hide'
 									: ''} list-group-item list-group-item-action "
 							>
-								<Clipboard />
-								{shorten(rsaJWK.publicKeyJWK.kid)}
+								{rsaJWK.name}
+								<Clipboard>
+									{rsaJWK.publicKeyJWK.kid}</Clipboard
+								>
 							</li>
 						{/each}
 					</ul>
