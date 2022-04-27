@@ -6,17 +6,19 @@
 	export let handleDenied;
 </script>
 
-<div>
-	<div class="attention">
-		<div>
-			⚠️ Authorize {props.method} from your wallet?
-		</div>
-		<div class="submit">
-			<button class="yellow" on:click={handleDenied}>No</button>
-			<button class="green" on:click={handleConfirmed}>Yes</button>
+<slot>
+	<div>
+		<div class="attention">
+			<div>
+				⚠️ Authorize {props.method} from your wallet?
+			</div>
+			<div class="submit">
+				<button class="green" on:click={handleConfirmed}>Yes</button>
+				<button class="yellow" on:click={handleDenied}>No</button>
+			</div>
 		</div>
 	</div>
-</div>
+</slot>
 
 <style>
 	div.attention {

@@ -1,6 +1,4 @@
 <script>
-	import DefaultConfirmation from './DefaultConfirmation.svelte';
-
 	export let props;
 	export let handleConfirmed;
 	export let handleDenied;
@@ -18,8 +16,8 @@
 		⚠️ Decrypt {decoder.decode(props.params.tag)}?
 	</div>
 	<div class="submit">
-		<button class="yellow" on:click|preventDefault={handleDenied}>No</button>
 		<button class="green" on:click|preventDefault={handleConfirmed}>Yes</button>
+		<button class="yellow" on:click|preventDefault={handleDenied}>No</button>
 	</div>
 </div>
 

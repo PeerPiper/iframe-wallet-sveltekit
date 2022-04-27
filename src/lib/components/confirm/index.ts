@@ -1,7 +1,7 @@
 import { handlers } from '@peerpiper/iframe-wallet-engine';
 import DefaultConfirmation from './DefaultConfirmation.svelte';
 import Connect from './Connect.svelte';
-// import ArweaveSign from '../arweave/ConfirmSign.svelte';
+import ArweaveSign from './ArweaveSign.svelte';
 import Sign from './Sign.svelte';
 import Decrypt from './Decrypt.svelte';
 
@@ -24,7 +24,7 @@ let customizedComponents = {
 	},
 	arweaveWalletAPI: {
 		sign: {
-			// component: ArweaveSign
+			component: ArweaveSign
 		}
 	},
 	proxcryptor: {
