@@ -1,7 +1,8 @@
 import { __vitePreload } from "../chunks/preload-helper-c37781a6.js";
-import { SvelteComponent, init, safe_not_equal, element, claim_element, children, detach, insert_hydration, group_outros, transition_out, check_outros, transition_in, add_render_callback, create_bidirectional_transition, fade, attr, onMount, src_url_equal, listen, noop, text, claim_text, append_hydration, set_data, svg_element, claim_svg_element, set_style, toggle_class, create_component, empty, claim_component, mount_component, destroy_component, create_slot, space, claim_space, update_slot_base, get_all_dirty_from_scope, get_slot_changes, createEventDispatcher, set_input_value, run_all, subscribe, destroy_each, is_function } from "../chunks/vendor-19fdf801.js";
+import { SvelteComponent, init, safe_not_equal, element, claim_element, children, detach, insert_hydration, group_outros, transition_out, check_outros, transition_in, add_render_callback, create_bidirectional_transition, attr, onMount, src_url_equal, listen, noop, text, claim_text, append_hydration, set_data, svg_element, claim_svg_element, set_style, toggle_class, create_component, empty, claim_component, mount_component, destroy_component, create_slot, space, claim_space, update_slot_base, get_all_dirty_from_scope, get_slot_changes, createEventDispatcher, set_input_value, run_all, subscribe, destroy_each, is_function } from "../chunks/index-4df20881.js";
 import { IconX, goto } from "../chunks/x-b1d924ae.js";
-import { DragOverlay, IconCloud } from "../chunks/DragOverlay-75396dd8.js";
+import { fade } from "../chunks/index-fc89d724.js";
+import { DragOverlay, IconCloud } from "../chunks/DragOverlay-08e56bd7.js";
 import "../chunks/singletons-cdabada9.js";
 function create_if_block$3(ctx) {
   let div;
@@ -1088,7 +1089,7 @@ function instance$1($$self, $$props, $$invalidate) {
   let model, emit;
   let dragOverlay;
   onMount(async () => {
-    $$subscribe_dragOverlay($$invalidate(5, { dragOverlay } = await __vitePreload(() => import("../chunks/InterfaceStore-f27ee5ef.js"), true ? ["chunks/InterfaceStore-f27ee5ef.js","chunks/utils-66a08721.js","chunks/vendor-19fdf801.js"] : void 0), dragOverlay));
+    $$subscribe_dragOverlay($$invalidate(5, { dragOverlay } = await __vitePreload(() => import("../chunks/InterfaceStore-5914e925.js"), true ? ["chunks/InterfaceStore-5914e925.js","chunks/utils-d62053b9.js","chunks/index-5327d83b.js","chunks/index-4df20881.js"] : void 0), dragOverlay));
   });
   const handleFiles = (e) => {
     var _a, _b;
@@ -2001,9 +2002,7 @@ function create_fragment(ctx) {
 function instance($$self, $$props, $$invalidate) {
   let Wallets;
   onMount(async () => {
-    ({ Wallets } = await __vitePreload(() => import("../chunks/vendor-19fdf801.js").then(function(n) {
-      return n.index;
-    }), true ? [] : void 0));
+    ({ Wallets } = await __vitePreload(() => import("../chunks/index-7263015b.js"), true ? [] : void 0));
     console.log({ Wallets });
   });
   const hardwareProviders = [LedgerProviderData];
@@ -2091,4 +2090,4 @@ class Add extends SvelteComponent {
   }
 }
 export { Add as default };
-//# sourceMappingURL=add.svelte-33e18818.js.map
+//# sourceMappingURL=add.svelte-bc129631.js.map

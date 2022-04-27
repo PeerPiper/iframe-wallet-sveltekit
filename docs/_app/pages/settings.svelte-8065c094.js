@@ -1,4 +1,4 @@
-import { SvelteComponent, init, safe_not_equal, text, claim_text, insert_hydration, noop, detach } from "../chunks/vendor-19fdf801.js";
+import { SvelteComponent, init, safe_not_equal, text, claim_text, insert_hydration, noop, detach } from "../chunks/index-4df20881.js";
 function create_fragment(ctx) {
   let t;
   return {
@@ -27,4 +27,4 @@ class Settings extends SvelteComponent {
   }
 }
 export { Settings as default };
-//# sourceMappingURL=settings.svelte-0665af8b.js.map
+//# sourceMappingURL=settings.svelte-8065c094.js.map

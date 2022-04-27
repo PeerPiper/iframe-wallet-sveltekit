@@ -17,7 +17,7 @@ var __spreadValues = (a, b) => {
   return a;
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
-import { writable, derived } from "./vendor-19fdf801.js";
+import { writable, derived } from "./index-5327d83b.js";
 function reactive(initial) {
   const store = writable(initial);
   const callback = (s) => {
@@ -51,4 +51,4 @@ function reactive(initial) {
   };
 }
 export { reactive };
-//# sourceMappingURL=utils-66a08721.js.map
+//# sourceMappingURL=utils-d62053b9.js.map

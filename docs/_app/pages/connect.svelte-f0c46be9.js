@@ -18,7 +18,8 @@ var __spreadValues = (a, b) => {
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 import { __vitePreload } from "../chunks/preload-helper-c37781a6.js";
-import { SvelteComponent, init, safe_not_equal, empty, insert_hydration, noop, detach, element, text, claim_element, children, claim_text, attr, set_style, toggle_class, append_hydration, listen, set_data, destroy_each, space, claim_space, transition_in, create_component, claim_component, mount_component, transition_out, destroy_component, group_outros, check_outros, add_render_callback, create_bidirectional_transition, fade, onMount } from "../chunks/vendor-19fdf801.js";
+import { SvelteComponent, init, safe_not_equal, empty, insert_hydration, noop, detach, element, text, claim_element, children, claim_text, attr, set_style, toggle_class, append_hydration, listen, set_data, destroy_each, space, claim_space, transition_in, create_component, claim_component, mount_component, transition_out, destroy_component, group_outros, check_outros, add_render_callback, create_bidirectional_transition, onMount } from "../chunks/index-4df20881.js";
+import { fade } from "../chunks/index-fc89d724.js";
 import { IconX } from "../chunks/x-b1d924ae.js";
 import "../chunks/singletons-cdabada9.js";
 var Carousel_svelte_svelte_type_style_lang = "";
@@ -790,9 +791,7 @@ function instance$1($$self, $$props, $$invalidate) {
   let { state } = $$props;
   let Wallets, Connect, Channel;
   onMount(async () => {
-    $$invalidate(7, { Connect, Wallets, Channel } = await __vitePreload(() => import("../chunks/vendor-19fdf801.js").then(function(n) {
-      return n.index;
-    }), true ? [] : void 0), Wallets);
+    $$invalidate(7, { Connect, Wallets, Channel } = await __vitePreload(() => import("../chunks/index-7263015b.js"), true ? [] : void 0), Wallets);
   });
   const tabs = [{ name: "Requests", color: "var(--orange)" }];
   const connect = () => {
@@ -1255,10 +1254,8 @@ function instance($$self, $$props, $$invalidate) {
   let state;
   let connectors;
   onMount(async () => {
-    await __vitePreload(() => import("../chunks/InterfaceStore-f27ee5ef.js"), true ? ["chunks/InterfaceStore-f27ee5ef.js","chunks/utils-66a08721.js","chunks/vendor-19fdf801.js"] : void 0);
-    $$invalidate(1, { Connect, Wallets, Channel } = await __vitePreload(() => import("../chunks/vendor-19fdf801.js").then(function(n) {
-      return n.index;
-    }), true ? [] : void 0), Channel);
+    await __vitePreload(() => import("../chunks/InterfaceStore-5914e925.js"), true ? ["chunks/InterfaceStore-5914e925.js","chunks/utils-d62053b9.js","chunks/index-5327d83b.js","chunks/index-4df20881.js"] : void 0);
+    $$invalidate(1, { Connect, Wallets, Channel } = await __vitePreload(() => import("../chunks/index-7263015b.js"), true ? [] : void 0), Channel);
     console.log({ Channel, Connect });
     $$invalidate(2, state = Connect.state);
     $$invalidate(0, connectors = Connect.connectors());
@@ -1278,4 +1275,4 @@ class Connect_1 extends SvelteComponent {
   }
 }
 export { Connect_1 as default };
-//# sourceMappingURL=connect.svelte-d5135b1b.js.map
+//# sourceMappingURL=connect.svelte-f0c46be9.js.map

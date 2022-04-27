@@ -1,5 +1,6 @@
 import { __vitePreload } from "./preload-helper-c37781a6.js";
-import { SvelteComponent, init, safe_not_equal, element, claim_element, children, detach, attr, insert_hydration, append_hydration, add_render_callback, create_bidirectional_transition, fade, empty, transition_in, group_outros, transition_out, check_outros, onMount, subscribe, noop } from "./vendor-19fdf801.js";
+import { SvelteComponent, init, safe_not_equal, element, claim_element, children, detach, attr, insert_hydration, append_hydration, add_render_callback, create_bidirectional_transition, empty, transition_in, group_outros, transition_out, check_outros, onMount, subscribe, noop } from "./index-4df20881.js";
+import { fade } from "./index-fc89d724.js";
 var IconCloud = "/iframe-wallet-sveltekit/_app/assets/cloud-5b13ee2b.svg";
 var DragOverlay_svelte_svelte_type_style_lang = "";
 function create_if_block(ctx) {
@@ -118,7 +119,7 @@ function instance($$self, $$props, $$invalidate) {
   let dragOverlay;
   let mounted;
   onMount(async () => {
-    $$subscribe_dragOverlay($$invalidate(0, { dragOverlay } = await __vitePreload(() => import("./InterfaceStore-f27ee5ef.js"), true ? ["chunks/InterfaceStore-f27ee5ef.js","chunks/utils-66a08721.js","chunks/vendor-19fdf801.js"] : void 0), dragOverlay));
+    $$subscribe_dragOverlay($$invalidate(0, { dragOverlay } = await __vitePreload(() => import("./InterfaceStore-5914e925.js"), true ? ["chunks/InterfaceStore-5914e925.js","chunks/utils-d62053b9.js","chunks/index-5327d83b.js","chunks/index-4df20881.js"] : void 0), dragOverlay));
     $$invalidate(1, mounted = true);
   });
   return [dragOverlay, mounted, $dragOverlay];
@@ -130,4 +131,4 @@ class DragOverlay extends SvelteComponent {
   }
 }
 export { DragOverlay, IconCloud };
-//# sourceMappingURL=DragOverlay-75396dd8.js.map
+//# sourceMappingURL=DragOverlay-08e56bd7.js.map
