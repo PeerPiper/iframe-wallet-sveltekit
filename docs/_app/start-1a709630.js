@@ -745,7 +745,7 @@ const components = [
   () => __vitePreload(() => import("./error.svelte-1fbf4c09.js"), true ? ["error.svelte-1fbf4c09.js","chunks/index-4df20881.js"] : void 0),
   () => __vitePreload(() => import("./pages/add.svelte-eb5f6b90.js"), true ? ["pages/add.svelte-eb5f6b90.js","assets/pages/add.svelte-02f56086.css","chunks/preload-helper-c37781a6.js","chunks/index-4df20881.js","chunks/x-b1d924ae.js","assets/x-0da38465.css","chunks/singletons-cdabada9.js","chunks/index-fc89d724.js","chunks/DragOverlay-08e56bd7.js","assets/DragOverlay-e81fab6c.css"] : void 0),
   () => __vitePreload(() => import("./pages/connect.svelte-5b4ff70d.js"), true ? ["pages/connect.svelte-5b4ff70d.js","assets/pages/connect.svelte-96515d6c.css","chunks/preload-helper-c37781a6.js","chunks/index-4df20881.js","chunks/index-fc89d724.js","chunks/x-b1d924ae.js","assets/x-0da38465.css","chunks/singletons-cdabada9.js"] : void 0),
-  () => __vitePreload(() => import("./pages/index.svelte-94bad526.js"), true ? ["pages/index.svelte-94bad526.js","assets/pages/index.svelte-4785df89.css","chunks/preload-helper-c37781a6.js","chunks/index-4df20881.js","chunks/index-7a951cd6.js","chunks/index-5327d83b.js","chunks/index-fc89d724.js"] : void 0),
+  () => __vitePreload(() => import("./pages/index.svelte-1f792d2d.js"), true ? ["pages/index.svelte-1f792d2d.js","assets/pages/index.svelte-4785df89.css","chunks/preload-helper-c37781a6.js","chunks/index-4df20881.js","chunks/index-7a951cd6.js","chunks/index-5327d83b.js","chunks/index-fc89d724.js"] : void 0),
   () => __vitePreload(() => import("./pages/settings.svelte-8065c094.js"), true ? ["pages/settings.svelte-8065c094.js","chunks/index-4df20881.js"] : void 0)
 ];
 const dictionary = {
@@ -876,7 +876,7 @@ function notifiable_store(value) {
 }
 function create_updated_store() {
   const { set, subscribe } = writable(false);
-  const initial = "1651146499369";
+  const initial = "1651151758435";
   let timeout;
   async function check() {
     clearTimeout(timeout);
@@ -1820,4 +1820,4 @@ async function start({ paths, target, session, route, spa, trailing_slash, hydra
   dispatchEvent(new CustomEvent("sveltekit:start"));
 }
 export { start };
-//# sourceMappingURL=start-891e4e23.js.map
+//# sourceMappingURL=start-1a709630.js.map

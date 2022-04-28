@@ -1552,14 +1552,18 @@ function instance$a($$self, $$props, $$invalidate) {
     $$invalidate(1, handleGenerateKeypair = async () => {
       $$invalidate(2, creating = "Creating keypairs...");
       const mnemonic = await index.generateMnemonic();
-      set_store_value(storedValue, $storedValue = __spreadProps(__spreadValues({}, $storedValue), { mnemonic }), $storedValue);
+      const rsajwk = await index.generateRsaJwk();
+      set_store_value(storedValue, $storedValue = __spreadProps(__spreadValues({}, $storedValue), { mnemonic, rsajwk }), $storedValue);
       $$invalidate(2, creating += "<br/>Created mnemonic.");
       $$invalidate(2, creating += `<br/>${mnemonic}`);
       $$invalidate(2, creating += "<br/>Creating master keypair (type ed25519)...");
     });
   });
   async function loadKeys() {
-    await index.loadMnemonicInProxcryptor($storedValue.mnemonic);
+    await index.loadSecrets({
+      mnemonic: $storedValue.mnemonic,
+      rsajwk: $storedValue.rsajwk
+    });
     dispatch("loadedKeys", "details");
     $$invalidate(3, keys = getLoadedKeys());
   }
@@ -5839,4 +5843,4 @@ class Routes extends SvelteComponent {
   }
 }
 export { Routes as default };
-//# sourceMappingURL=index.svelte-94bad526.js.map
+//# sourceMappingURL=index.svelte-1f792d2d.js.map
