@@ -791,7 +791,7 @@ function instance$1($$self, $$props, $$invalidate) {
   let { state } = $$props;
   let Wallets, Connect, Channel;
   onMount(async () => {
-    $$invalidate(7, { Connect, Wallets, Channel } = await __vitePreload(() => import("../chunks/index-7263015b.js"), true ? [] : void 0), Wallets);
+    $$invalidate(7, { Connect, Wallets, Channel } = await __vitePreload(() => import("../chunks/index-7a951cd6.js"), true ? [] : void 0), Wallets);
   });
   const tabs = [{ name: "Requests", color: "var(--orange)" }];
   const connect = () => {
@@ -1255,7 +1255,7 @@ function instance($$self, $$props, $$invalidate) {
   let connectors;
   onMount(async () => {
     await __vitePreload(() => import("../chunks/InterfaceStore-5914e925.js"), true ? ["chunks/InterfaceStore-5914e925.js","chunks/utils-d62053b9.js","chunks/index-5327d83b.js","chunks/index-4df20881.js"] : void 0);
-    $$invalidate(1, { Connect, Wallets, Channel } = await __vitePreload(() => import("../chunks/index-7263015b.js"), true ? [] : void 0), Channel);
+    $$invalidate(1, { Connect, Wallets, Channel } = await __vitePreload(() => import("../chunks/index-7a951cd6.js"), true ? [] : void 0), Channel);
     console.log({ Channel, Connect });
     $$invalidate(2, state = Connect.state);
     $$invalidate(0, connectors = Connect.connectors());
@@ -1275,4 +1275,4 @@ class Connect_1 extends SvelteComponent {
   }
 }
 export { Connect_1 as default };
-//# sourceMappingURL=connect.svelte-f0c46be9.js.map
+//# sourceMappingURL=connect.svelte-5b4ff70d.js.map

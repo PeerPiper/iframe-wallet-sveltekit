@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-65d27832.js",
+    "file": "start-891e4e23.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -19,7 +19,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-c3dc4aca.js",
+    "file": "pages/__layout.svelte-9064964b.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -32,7 +32,7 @@
       "_index-5327d83b.js"
     ],
     "dynamicImports": [
-      "../iframe-wallet-engine/dist/index.mjs",
+      "node_modules/@peerpiper/iframe-wallet-engine/dist/index.mjs",
       "src/lib/store/InterfaceStore.js"
     ],
     "css": [
@@ -55,7 +55,7 @@
     ]
   },
   "src/routes/add.svelte": {
-    "file": "pages/add.svelte-bc129631.js",
+    "file": "pages/add.svelte-eb5f6b90.js",
     "src": "src/routes/add.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -69,7 +69,7 @@
     ],
     "dynamicImports": [
       "src/lib/store/InterfaceStore.js",
-      "../iframe-wallet-engine/dist/index.mjs"
+      "node_modules/@peerpiper/iframe-wallet-engine/dist/index.mjs"
     ],
     "css": [
       "assets/pages/add.svelte-02f56086.css"
@@ -81,7 +81,7 @@
     ]
   },
   "src/routes/connect.svelte": {
-    "file": "pages/connect.svelte-f0c46be9.js",
+    "file": "pages/connect.svelte-5b4ff70d.js",
     "src": "src/routes/connect.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -93,7 +93,7 @@
       "_singletons-cdabada9.js"
     ],
     "dynamicImports": [
-      "../iframe-wallet-engine/dist/index.mjs",
+      "node_modules/@peerpiper/iframe-wallet-engine/dist/index.mjs",
       "src/lib/store/InterfaceStore.js"
     ],
     "css": [
@@ -104,19 +104,19 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-5ea8fed8.js",
+    "file": "pages/index.svelte-94bad526.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-c37781a6.js",
       "_index-4df20881.js",
-      "../iframe-wallet-engine/dist/index.mjs",
+      "node_modules/@peerpiper/iframe-wallet-engine/dist/index.mjs",
       "_index-5327d83b.js",
       "_index-fc89d724.js"
     ],
     "dynamicImports": [
-      "../iframe-wallet-engine/dist/index.mjs",
+      "node_modules/@peerpiper/iframe-wallet-engine/dist/index.mjs",
       "node_modules/immortal-db/src/index.js"
     ],
     "css": [
@@ -189,9 +189,9 @@
       "assets/x-2bebe714.svg"
     ]
   },
-  "../iframe-wallet-engine/dist/index.mjs": {
-    "file": "chunks/index-7263015b.js",
-    "src": "../iframe-wallet-engine/dist/index.mjs",
+  "node_modules/@peerpiper/iframe-wallet-engine/dist/index.mjs": {
+    "file": "chunks/index-7a951cd6.js",
+    "src": "node_modules/@peerpiper/iframe-wallet-engine/dist/index.mjs",
     "isDynamicEntry": true
   },
   "src/lib/store/InterfaceStore.js": {

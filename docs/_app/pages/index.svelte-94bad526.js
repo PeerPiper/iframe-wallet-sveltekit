@@ -19,13 +19,13 @@ var __spreadValues = (a, b) => {
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 import { __vitePreload } from "../chunks/preload-helper-c37781a6.js";
 import { SvelteComponent, init, safe_not_equal, empty, insert_hydration, group_outros, transition_out, check_outros, transition_in, detach, element, claim_element, children, attr, listen, is_function, component_subscribe, onMount, set_store_value, globals, text, claim_text, append_hydration, prevent_default, set_data, noop, create_slot, update_slot_base, get_all_dirty_from_scope, get_slot_changes, space, claim_space, binding_callbacks, svg_element, claim_svg_element, add_render_callback, create_in_transition, create_out_transition, create_component, claim_component, mount_component, destroy_component, destroy_each, createEventDispatcher, HtmlTagHydration, claim_html_tag, set_style, add_resize_listener, run_all, bubble, null_to_empty } from "../chunks/index-4df20881.js";
-import { CONSTANTS as YA, internals as oA, handlers as cA } from "../chunks/index-7263015b.js";
+import { CONSTANTS, internals as index, handlers } from "../chunks/index-7a951cd6.js";
 import { writable } from "../chunks/index-5327d83b.js";
 import { fade } from "../chunks/index-fc89d724.js";
 const storedValue = writable();
 var Connector_svelte_svelte_type_style_lang = "";
 const { window: window_1 } = globals;
-function create_if_block$7(ctx) {
+function create_if_block$8(ctx) {
   let current_block_type_index;
   let if_block;
   let if_block_anchor;
@@ -201,7 +201,7 @@ function create_fragment$d(ctx) {
   let current;
   let mounted;
   let dispose;
-  let if_block = ctx[0] && create_if_block$7(ctx);
+  let if_block = ctx[0] && create_if_block$8(ctx);
   return {
     c() {
       div = element("div");
@@ -242,7 +242,7 @@ function create_fragment$d(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block$7(ctx);
+          if_block = create_if_block$8(ctx);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(div, null);
@@ -292,11 +292,11 @@ function instance$d($$self, $$props, $$invalidate) {
       openedWindow = window.open(window.location.href, "_blank");
     });
     $$invalidate(2, handleMessage = async (event) => {
-      if (event.data == YA.OPENED_SIGNAL) {
+      if (event.data == CONSTANTS.OPENED_SIGNAL) {
         event.ports[0].postMessage(topUrl);
         return;
       }
-      if (event.data.key == YA.WINDOW_SYNC) {
+      if (event.data.key == CONSTANTS.WINDOW_SYNC) {
         console.log("Sync received ");
         set_store_value(storedValue, $storedValue = event.data.storedValue, $storedValue);
         event.ports[0].postMessage("Imported");
@@ -304,7 +304,7 @@ function instance$d($$self, $$props, $$invalidate) {
         openedWindow.close();
         window.focus();
       }
-      if (event.data == YA.CLOSING) {
+      if (event.data == CONSTANTS.CLOSING) {
         $$invalidate(3, connecting = false);
       }
     });
@@ -420,7 +420,7 @@ function create_else_block$2(ctx) {
     }
   };
 }
-function create_if_block$6(ctx) {
+function create_if_block$7(ctx) {
   let div;
   let t;
   let div_outro;
@@ -473,7 +473,7 @@ function create_fragment$c(ctx) {
   let dispose;
   const default_slot_template = ctx[5].default;
   const default_slot = create_slot(default_slot_template, ctx, ctx[4], get_default_slot_context$2);
-  const if_block_creators = [create_if_block$6, create_else_block$2];
+  const if_block_creators = [create_if_block$7, create_else_block$2];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
     if (ctx2[1])
@@ -619,7 +619,7 @@ function get_each_context_1(ctx, list, i) {
   child_ctx[6] = list[i];
   return child_ctx;
 }
-function create_if_block$5(ctx) {
+function create_if_block$6(ctx) {
   let div;
   let show_if_1 = ctx[0].filter(func_1).length;
   let t;
@@ -1105,7 +1105,7 @@ function create_default_slot_1$1(ctx) {
     }
   };
 }
-function create_default_slot$3(ctx) {
+function create_default_slot$2(ctx) {
   let t_value = ctx[3].publicKey + "";
   let t;
   return {
@@ -1157,7 +1157,7 @@ function create_each_block$2(ctx) {
   });
   clipboard2 = new Clipboard({
     props: {
-      $$slots: { default: [create_default_slot$3] },
+      $$slots: { default: [create_default_slot$2] },
       $$scope: { ctx }
     }
   });
@@ -1268,7 +1268,7 @@ function create_each_block$2(ctx) {
 function create_fragment$b(ctx) {
   let if_block_anchor;
   let current;
-  let if_block = ctx[0] && ctx[0].length > 0 && create_if_block$5(ctx);
+  let if_block = ctx[0] && ctx[0].length > 0 && create_if_block$6(ctx);
   return {
     c() {
       if (if_block)
@@ -1294,7 +1294,7 @@ function create_fragment$b(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block$5(ctx2);
+          if_block = create_if_block$6(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -1406,7 +1406,7 @@ function create_else_block$1(ctx) {
     }
   };
 }
-function create_if_block$4(ctx) {
+function create_if_block$5(ctx) {
   let div;
   let t0;
   let button;
@@ -1478,7 +1478,7 @@ function create_fragment$a(ctx) {
   let if_block;
   let if_block_anchor;
   let current;
-  const if_block_creators = [create_if_block$4, create_else_block$1];
+  const if_block_creators = [create_if_block$5, create_else_block$1];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
     if (ctx2[0] !== void 0 && ctx2[0] === null)
@@ -1551,27 +1551,20 @@ function instance$a($$self, $$props, $$invalidate) {
   onMount(async () => {
     $$invalidate(1, handleGenerateKeypair = async () => {
       $$invalidate(2, creating = "Creating keypairs...");
-      const mnemonicPromise = oA.generateMnemonic();
-      const rsajwkPromise = oA.generateRsaJwk();
-      const [mnemonic, rsajwk] = await Promise.all([mnemonicPromise, rsajwkPromise]);
-      console.log({ rsajwk });
-      set_store_value(storedValue, $storedValue = __spreadProps(__spreadValues({}, $storedValue), { mnemonic, rsajwk }), $storedValue);
+      const mnemonic = await index.generateMnemonic();
+      set_store_value(storedValue, $storedValue = __spreadProps(__spreadValues({}, $storedValue), { mnemonic }), $storedValue);
       $$invalidate(2, creating += "<br/>Created mnemonic.");
       $$invalidate(2, creating += `<br/>${mnemonic}`);
       $$invalidate(2, creating += "<br/>Creating master keypair (type ed25519)...");
     });
   });
   async function loadKeys() {
-    console.log({ sv: $storedValue });
-    await oA.loadSecrets({
-      mnemonic: $storedValue.mnemonic,
-      rsajwk: $storedValue.rsajwk
-    });
+    await index.loadMnemonicInProxcryptor($storedValue.mnemonic);
     dispatch("loadedKeys", "details");
     $$invalidate(3, keys = getLoadedKeys());
   }
   function getLoadedKeys() {
-    return oA.getLoadedKeys();
+    return index.getLoadedKeys();
   }
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -1598,7 +1591,7 @@ const get_default_slot_context$1 = (ctx) => ({
   show: ctx[4],
   hide: ctx[5]
 });
-function create_if_block$3(ctx) {
+function create_if_block$4(ctx) {
   let current;
   const default_slot_template = ctx[8].default;
   const default_slot = create_slot(default_slot_template, ctx, ctx[7], get_default_slot_context$1);
@@ -1644,7 +1637,7 @@ function create_fragment$9(ctx) {
   let div;
   let div_resize_listener;
   let current;
-  let if_block = ctx[3] && create_if_block$3(ctx);
+  let if_block = ctx[3] && create_if_block$4(ctx);
   return {
     c() {
       div = element("div");
@@ -1680,7 +1673,7 @@ function create_fragment$9(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block$3(ctx2);
+          if_block = create_if_block$4(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(div, null);
@@ -1727,7 +1720,7 @@ function instance$9($$self, $$props, $$invalidate) {
     setWidth: (w) => $$invalidate(2, width = w)
   };
   onMount(async () => {
-    ({ Connection } = await __vitePreload(() => import("../chunks/index-7263015b.js"), true ? [] : void 0));
+    ({ Connection } = await __vitePreload(() => import("../chunks/index-7a951cd6.js"), true ? [] : void 0));
     const connection = new Connection();
     $$invalidate(6, connector = await connection.init(optionalHandlers));
     $$invalidate(3, walletReady = async () => {
@@ -1841,7 +1834,7 @@ class Manager extends SvelteComponent {
 }
 const get_default_slot_changes = (dirty) => ({ syncKeys: dirty & 2 });
 const get_default_slot_context = (ctx) => ({ syncKeys: ctx[1] });
-function create_if_block$2(ctx) {
+function create_if_block$3(ctx) {
   let current;
   const default_slot_template = ctx[4].default;
   const default_slot = create_slot(default_slot_template, ctx, ctx[3], get_default_slot_context);
@@ -1886,7 +1879,7 @@ function create_if_block$2(ctx) {
 function create_fragment$7(ctx) {
   let if_block_anchor;
   let current;
-  let if_block = ctx[0] && !ctx[2] && create_if_block$2(ctx);
+  let if_block = ctx[0] && !ctx[2] && create_if_block$3(ctx);
   return {
     c() {
       if (if_block)
@@ -1912,7 +1905,7 @@ function create_fragment$7(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block$2(ctx2);
+          if_block = create_if_block$3(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -1964,7 +1957,7 @@ function instance$7($$self, $$props, $$invalidate) {
     var _a;
     try {
       if (window.location.origin === ((_a = window.opener) == null ? void 0 : _a.origin)) {
-        sendOpenerMsg(YA.OPENED_SIGNAL, (event) => {
+        sendOpenerMsg(CONSTANTS.OPENED_SIGNAL, (event) => {
           console.log("iframe confirmed loaded by opener");
           $$invalidate(2, pending = false);
         });
@@ -1986,7 +1979,7 @@ function instance$7($$self, $$props, $$invalidate) {
     }
     $$invalidate(1, syncKeys = () => {
       sendOpenerMsg({
-        key: YA.WINDOW_SYNC,
+        key: CONSTANTS.WINDOW_SYNC,
         storedValue: $storedValue
       }, (event) => {
         console.log("onComplete", event.data);
@@ -2000,7 +1993,7 @@ function instance$7($$self, $$props, $$invalidate) {
         console.log((_a2 = window.opener) == null ? void 0 : _a2.origin);
         console.log(window.location.origin);
         if (((_b = window.opener) == null ? void 0 : _b.origin) === window.location.origin)
-          window.opener.postMessage(YA.CLOSING);
+          window.opener.postMessage(CONSTANTS.CLOSING);
         navigateBack();
       } catch (error) {
         console.log("Origins didn't match");
@@ -2021,7 +2014,7 @@ class Opened extends SvelteComponent {
   }
 }
 var DefaultConfirmation_svelte_svelte_type_style_lang = "";
-function create_fragment$6(ctx) {
+function fallback_block(ctx) {
   let div3;
   let div2;
   let div0;
@@ -2119,13 +2112,11 @@ function create_fragment$6(ctx) {
         mounted = true;
       }
     },
-    p(new_ctx, [dirty]) {
+    p(new_ctx, dirty) {
       ctx = new_ctx;
       if (dirty & 1 && t1_value !== (t1_value = ctx[0].method + ""))
         set_data(t1, t1_value);
     },
-    i: noop,
-    o: noop,
     d(detaching) {
       if (detaching)
         detach(div3);
@@ -2134,11 +2125,58 @@ function create_fragment$6(ctx) {
     }
   };
 }
+function create_fragment$6(ctx) {
+  let current;
+  const default_slot_template = ctx[4].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[3], null);
+  const default_slot_or_fallback = default_slot || fallback_block(ctx);
+  return {
+    c() {
+      if (default_slot_or_fallback)
+        default_slot_or_fallback.c();
+    },
+    l(nodes) {
+      if (default_slot_or_fallback)
+        default_slot_or_fallback.l(nodes);
+    },
+    m(target, anchor) {
+      if (default_slot_or_fallback) {
+        default_slot_or_fallback.m(target, anchor);
+      }
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 8)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[3], !current ? get_all_dirty_from_scope(ctx2[3]) : get_slot_changes(default_slot_template, ctx2[3], dirty, null), null);
+        }
+      } else {
+        if (default_slot_or_fallback && default_slot_or_fallback.p && (!current || dirty & 7)) {
+          default_slot_or_fallback.p(ctx2, !current ? -1 : dirty);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(default_slot_or_fallback, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(default_slot_or_fallback, local);
+      current = false;
+    },
+    d(detaching) {
+      if (default_slot_or_fallback)
+        default_slot_or_fallback.d(detaching);
+    }
+  };
+}
 function instance$6($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
   let { props } = $$props;
   let { handleConfirmed } = $$props;
   let { handleDenied } = $$props;
-  console.log({ props, handleConfirmed });
   $$self.$$set = ($$props2) => {
     if ("props" in $$props2)
       $$invalidate(0, props = $$props2.props);
@@ -2146,13 +2184,10 @@ function instance$6($$self, $$props, $$invalidate) {
       $$invalidate(1, handleConfirmed = $$props2.handleConfirmed);
     if ("handleDenied" in $$props2)
       $$invalidate(2, handleDenied = $$props2.handleDenied);
+    if ("$$scope" in $$props2)
+      $$invalidate(3, $$scope = $$props2.$$scope);
   };
-  $$self.$$.update = () => {
-    if ($$self.$$.dirty & 2) {
-      handleConfirmed && console.log({ handleConfirmed });
-    }
-  };
-  return [props, handleConfirmed, handleDenied];
+  return [props, handleConfirmed, handleDenied, $$scope, slots];
 }
 class DefaultConfirmation extends SvelteComponent {
   constructor(options) {
@@ -2165,7 +2200,7 @@ class DefaultConfirmation extends SvelteComponent {
   }
 }
 var Connect_svelte_svelte_type_style_lang = "";
-function create_default_slot$2(ctx) {
+function create_default_slot$1(ctx) {
   let div2;
   let div0;
   let t0;
@@ -2268,7 +2303,7 @@ function create_fragment$5(ctx) {
     props: ctx[0],
     $$slots: {
       default: [
-        create_default_slot$2,
+        create_default_slot$1,
         ({ props: p }) => ({ 4: p }),
         ({ props: p }) => p ? 16 : 0
       ]
@@ -4027,6 +4062,9 @@ function stringToBuffer(string) {
   }
   return new TextEncoder().encode(string);
 }
+function stringToB64Url(string) {
+  return bufferTob64Url(stringToBuffer(string));
+}
 function b64UrlToBuffer(b64UrlString) {
   return new Uint8Array(decode_1(b64UrlDecode(b64UrlString)));
 }
@@ -4044,49 +4082,6 @@ function b64UrlDecode(b64UrlString) {
   let padding;
   b64UrlString.length % 4 == 0 ? padding = 0 : padding = 4 - b64UrlString.length % 4;
   return b64UrlString.concat("=".repeat(padding));
-}
-async function getSignatureData(tx) {
-  tx = new Transaction(tx);
-  switch (tx.format) {
-    case 1:
-      let tags = tx.tags.reduce((accumulator, tag) => {
-        return concatBuffers([
-          accumulator,
-          tag.get("name", { decode: true, string: false }),
-          tag.get("value", { decode: true, string: false })
-        ]);
-      }, new Uint8Array());
-      return concatBuffers([
-        tx.get("owner", { decode: true, string: false }),
-        tx.get("target", { decode: true, string: false }),
-        tx.get("data", { decode: true, string: false }),
-        stringToBuffer(tx.quantity),
-        stringToBuffer(tx.reward),
-        tx.get("last_tx", { decode: true, string: false }),
-        tags
-      ]);
-    case 2:
-      if (!tx.data_root) {
-        await tx.prepareChunks(tx.data);
-      }
-      const tagList = tx.tags.map((tag) => [
-        tag.get("name", { decode: true, string: false }),
-        tag.get("value", { decode: true, string: false })
-      ]);
-      return await deepHash([
-        stringToBuffer(tx.format.toString()),
-        tx.get("owner", { decode: true, string: false }),
-        tx.get("target", { decode: true, string: false }),
-        stringToBuffer(tx.quantity),
-        stringToBuffer(tx.reward),
-        tx.get("last_tx", { decode: true, string: false }),
-        tagList,
-        stringToBuffer(tx.data_size),
-        tx.get("data_root", { decode: true, string: false })
-      ]);
-    default:
-      throw new Error(`Unexpected transaction format: ${tx.format}`);
-  }
 }
 class BaseObject {
   get(field, options) {
@@ -4135,7 +4130,7 @@ class Transaction extends BaseObject {
     this.signature = "";
     Object.assign(this, attributes);
     if (typeof this.data === "string") {
-      this.data = ArweaveUtils.b64UrlToBuffer(this.data);
+      this.data = b64UrlToBuffer(this.data);
     }
     if (attributes.tags) {
       this.tags = attributes.tags.map((tag) => {
@@ -4144,7 +4139,7 @@ class Transaction extends BaseObject {
     }
   }
   addTag(name, value) {
-    this.tags.push(new Tag(ArweaveUtils.stringToB64Url(name), ArweaveUtils.stringToB64Url(value)));
+    this.tags.push(new Tag(stringToB64Url(name), stringToB64Url(value)));
   }
   toJSON() {
     return {
@@ -4155,7 +4150,7 @@ class Transaction extends BaseObject {
       tags: this.tags,
       target: this.target,
       quantity: this.quantity,
-      data: ArweaveUtils.bufferTob64Url(this.data),
+      data: bufferTob64Url(this.data),
       data_size: this.data_size,
       data_root: this.data_root,
       data_tree: this.data_tree,
@@ -4184,7 +4179,7 @@ class Transaction extends BaseObject {
   async prepareChunks(data) {
     if (!this.chunks && data.byteLength > 0) {
       this.chunks = await generateTransactionChunks(data);
-      this.data_root = ArweaveUtils.bufferTob64Url(this.chunks.data_root);
+      this.data_root = bufferTob64Url(this.chunks.data_root);
     }
     if (!this.chunks && data.byteLength === 0) {
       this.chunks = {
@@ -4204,27 +4199,27 @@ class Transaction extends BaseObject {
     return {
       data_root: this.data_root,
       data_size: this.data_size,
-      data_path: ArweaveUtils.bufferTob64Url(proof.proof),
+      data_path: bufferTob64Url(proof.proof),
       offset: proof.offset.toString(),
-      chunk: ArweaveUtils.bufferTob64Url(data.slice(chunk.minByteRange, chunk.maxByteRange))
+      chunk: bufferTob64Url(data.slice(chunk.minByteRange, chunk.maxByteRange))
     };
   }
   async getSignatureData() {
     switch (this.format) {
       case 1:
         let tags = this.tags.reduce((accumulator, tag) => {
-          return ArweaveUtils.concatBuffers([
+          return concatBuffers([
             accumulator,
             tag.get("name", { decode: true, string: false }),
             tag.get("value", { decode: true, string: false })
           ]);
         }, new Uint8Array());
-        return ArweaveUtils.concatBuffers([
+        return concatBuffers([
           this.get("owner", { decode: true, string: false }),
           this.get("target", { decode: true, string: false }),
           this.get("data", { decode: true, string: false }),
-          ArweaveUtils.stringToBuffer(this.quantity),
-          ArweaveUtils.stringToBuffer(this.reward),
+          stringToBuffer(this.quantity),
+          stringToBuffer(this.reward),
           this.get("last_tx", { decode: true, string: false }),
           tags
         ]);
@@ -4237,14 +4232,14 @@ class Transaction extends BaseObject {
           tag.get("value", { decode: true, string: false })
         ]);
         return await deepHash([
-          ArweaveUtils.stringToBuffer(this.format.toString()),
+          stringToBuffer(this.format.toString()),
           this.get("owner", { decode: true, string: false }),
           this.get("target", { decode: true, string: false }),
-          ArweaveUtils.stringToBuffer(this.quantity),
-          ArweaveUtils.stringToBuffer(this.reward),
+          stringToBuffer(this.quantity),
+          stringToBuffer(this.reward),
           this.get("last_tx", { decode: true, string: false }),
           tagList,
-          ArweaveUtils.stringToBuffer(this.data_size),
+          stringToBuffer(this.data_size),
           this.get("data_root", { decode: true, string: false })
         ]);
       default:
@@ -4272,56 +4267,15 @@ const BigNum = (value, decimals) => {
 var ArweaveSign_svelte_svelte_type_style_lang = "";
 function get_each_context$1(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[12] = list[i].name;
-  child_ctx[13] = list[i].val;
+  child_ctx[7] = list[i].name;
+  child_ctx[8] = list[i].val;
   return child_ctx;
 }
-function create_each_block$1(ctx) {
-  let li;
-  let t0_value = ctx[12] + "";
-  let t0;
-  let t1;
-  let t2_value = ctx[13] + "";
-  let t2;
-  let li_class_value;
-  return {
-    c() {
-      li = element("li");
-      t0 = text(t0_value);
-      t1 = text(":\r\n					");
-      t2 = text(t2_value);
-      this.h();
-    },
-    l(nodes) {
-      li = claim_element(nodes, "LI", { class: true });
-      var li_nodes = children(li);
-      t0 = claim_text(li_nodes, t0_value);
-      t1 = claim_text(li_nodes, ":\r\n					");
-      t2 = claim_text(li_nodes, t2_value);
-      li_nodes.forEach(detach);
-      this.h();
-    },
-    h() {
-      attr(li, "class", li_class_value = null_to_empty(ctx[12].includes("App-Name") ? "bold" : "") + " svelte-qk18rg");
-    },
-    m(target, anchor) {
-      insert_hydration(target, li, anchor);
-      append_hydration(li, t0);
-      append_hydration(li, t1);
-      append_hydration(li, t2);
-    },
-    p: noop,
-    d(detaching) {
-      if (detaching)
-        detach(li);
-    }
-  };
-}
-function create_default_slot$1(ctx) {
+function create_if_block$2(ctx) {
   let div3;
   let div0;
   let t0;
-  let t1_value = ctx[11].method + "";
+  let t1_value = ctx[0].method + "";
   let t1;
   let t2;
   let t3;
@@ -4343,9 +4297,11 @@ function create_default_slot$1(ctx) {
   let br2;
   let t13;
   let div2;
-  let button;
+  let button0;
   let t14;
-  let button_disabled_value;
+  let t15;
+  let button1;
+  let t16;
   let mounted;
   let dispose;
   let each_value = ctx[4];
@@ -4379,8 +4335,11 @@ function create_default_slot$1(ctx) {
       br2 = element("br");
       t13 = space();
       div2 = element("div");
-      button = element("button");
+      button0 = element("button");
       t14 = text("Yes");
+      t15 = space();
+      button1 = element("button");
+      t16 = text("Cancel");
       this.h();
     },
     l(nodes) {
@@ -4414,10 +4373,15 @@ function create_default_slot$1(ctx) {
       t13 = claim_space(div3_nodes);
       div2 = claim_element(div3_nodes, "DIV", { class: true });
       var div2_nodes = children(div2);
-      button = claim_element(div2_nodes, "BUTTON", { class: true });
-      var button_nodes = children(button);
-      t14 = claim_text(button_nodes, "Yes");
-      button_nodes.forEach(detach);
+      button0 = claim_element(div2_nodes, "BUTTON", { class: true });
+      var button0_nodes = children(button0);
+      t14 = claim_text(button0_nodes, "Yes");
+      button0_nodes.forEach(detach);
+      t15 = claim_space(div2_nodes);
+      button1 = claim_element(div2_nodes, "BUTTON", { class: true });
+      var button1_nodes = children(button1);
+      t16 = claim_text(button1_nodes, "Cancel");
+      button1_nodes.forEach(detach);
       div2_nodes.forEach(detach);
       div3_nodes.forEach(detach);
       this.h();
@@ -4425,8 +4389,8 @@ function create_default_slot$1(ctx) {
     h() {
       attr(div0, "class", "svelte-qk18rg");
       attr(div1, "class", "svelte-qk18rg");
-      button.disabled = button_disabled_value = !ctx[2];
-      attr(button, "class", "svelte-qk18rg");
+      attr(button0, "class", "green svelte-qk18rg");
+      attr(button1, "class", "yellow svelte-qk18rg");
       attr(div2, "class", "submit svelte-qk18rg");
       attr(div3, "class", "attention svelte-qk18rg");
     },
@@ -4455,19 +4419,28 @@ function create_default_slot$1(ctx) {
       append_hydration(div1, br2);
       append_hydration(div3, t13);
       append_hydration(div3, div2);
-      append_hydration(div2, button);
-      append_hydration(button, t14);
+      append_hydration(div2, button0);
+      append_hydration(button0, t14);
+      append_hydration(div2, t15);
+      append_hydration(div2, button1);
+      append_hydration(button1, t16);
       if (!mounted) {
-        dispose = listen(button, "click", prevent_default(function() {
-          if (is_function(ctx[1].handleConfirm))
-            ctx[1].handleConfirm.apply(this, arguments);
-        }));
+        dispose = [
+          listen(button0, "click", prevent_default(function() {
+            if (is_function(ctx[1]))
+              ctx[1].apply(this, arguments);
+          })),
+          listen(button1, "click", prevent_default(function() {
+            if (is_function(ctx[2]))
+              ctx[2].apply(this, arguments);
+          }))
+        ];
         mounted = true;
       }
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
-      if (dirty & 2048 && t1_value !== (t1_value = ctx[11].method + ""))
+      if (dirty & 1 && t1_value !== (t1_value = ctx[0].method + ""))
         set_data(t1, t1_value);
       if (dirty & 16) {
         each_value = ctx[4];
@@ -4487,121 +4460,119 @@ function create_default_slot$1(ctx) {
         }
         each_blocks.length = each_value.length;
       }
-      if (dirty & 4 && button_disabled_value !== (button_disabled_value = !ctx[2])) {
-        button.disabled = button_disabled_value;
-      }
     },
     d(detaching) {
       if (detaching)
         detach(div3);
       destroy_each(each_blocks, detaching);
       mounted = false;
-      dispose();
+      run_all(dispose);
+    }
+  };
+}
+function create_each_block$1(ctx) {
+  let li;
+  let t0_value = ctx[7] + "";
+  let t0;
+  let t1;
+  let t2_value = ctx[8] + "";
+  let t2;
+  let li_class_value;
+  return {
+    c() {
+      li = element("li");
+      t0 = text(t0_value);
+      t1 = text(":\r\n					");
+      t2 = text(t2_value);
+      this.h();
+    },
+    l(nodes) {
+      li = claim_element(nodes, "LI", { class: true });
+      var li_nodes = children(li);
+      t0 = claim_text(li_nodes, t0_value);
+      t1 = claim_text(li_nodes, ":\r\n					");
+      t2 = claim_text(li_nodes, t2_value);
+      li_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(li, "class", li_class_value = null_to_empty(ctx[7].includes("App-Name") ? "bold" : "") + " svelte-qk18rg");
+    },
+    m(target, anchor) {
+      insert_hydration(target, li, anchor);
+      append_hydration(li, t0);
+      append_hydration(li, t1);
+      append_hydration(li, t2);
+    },
+    p: noop,
+    d(detaching) {
+      if (detaching)
+        detach(li);
     }
   };
 }
 function create_fragment$4(ctx) {
-  let defaultconfirmation;
-  let current;
-  let defaultconfirmation_props = {
-    props: ctx[0],
-    $$slots: {
-      default: [
-        create_default_slot$1,
-        ({ props: p }) => ({ 11: p }),
-        ({ props: p }) => p ? 2048 : 0
-      ]
-    },
-    $$scope: { ctx }
-  };
-  defaultconfirmation = new DefaultConfirmation({ props: defaultconfirmation_props });
-  ctx[5](defaultconfirmation);
-  defaultconfirmation.$on("confirmed", ctx[6]);
+  let if_block_anchor;
+  let if_block = ctx[3] && create_if_block$2(ctx);
   return {
     c() {
-      create_component(defaultconfirmation.$$.fragment);
+      if (if_block)
+        if_block.c();
+      if_block_anchor = empty();
     },
     l(nodes) {
-      claim_component(defaultconfirmation.$$.fragment, nodes);
+      if (if_block)
+        if_block.l(nodes);
+      if_block_anchor = empty();
     },
     m(target, anchor) {
-      mount_component(defaultconfirmation, target, anchor);
-      current = true;
+      if (if_block)
+        if_block.m(target, anchor);
+      insert_hydration(target, if_block_anchor, anchor);
     },
     p(ctx2, [dirty]) {
-      const defaultconfirmation_changes = {};
-      if (dirty & 1)
-        defaultconfirmation_changes.props = ctx2[0];
-      if (dirty & 67590) {
-        defaultconfirmation_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      defaultconfirmation.$set(defaultconfirmation_changes);
+      if (ctx2[3])
+        if_block.p(ctx2, dirty);
     },
-    i(local) {
-      if (current)
-        return;
-      transition_in(defaultconfirmation.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(defaultconfirmation.$$.fragment, local);
-      current = false;
-    },
+    i: noop,
+    o: noop,
     d(detaching) {
-      ctx[5](null);
-      destroy_component(defaultconfirmation, detaching);
+      if (if_block)
+        if_block.d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
     }
   };
 }
 function instance$4($$self, $$props, $$invalidate) {
   let { props } = $$props;
-  let defConf;
-  let checksOut = false;
-  const { dataToSign, options, transaction } = props.params;
+  let { handleConfirmed } = $$props;
+  let { handleDenied } = $$props;
+  console.log("Signing ", { params: props.params });
+  const transaction = props.params;
   let tx = new Transaction(transaction);
   let tags = tx.tags.map((tag) => ({
     name: tag.get("name", { decode: true, string: true }),
     val: tag.get("value", { decode: true, string: true })
   }));
-  async function checkTx() {
-    let signThisData = await getSignatureData(transaction);
-    signThisData = new Uint8Array(signThisData);
-    if (JSON.stringify(props.params.dataToSign) === JSON.stringify(signThisData))
-      $$invalidate(2, checksOut = true);
-    return checksOut;
-  }
-  function defaultconfirmation_binding($$value) {
-    binding_callbacks[$$value ? "unshift" : "push"](() => {
-      defConf = $$value;
-      $$invalidate(1, defConf);
-    });
-  }
-  function confirmed_handler(event) {
-    bubble.call(this, $$self, event);
-  }
   $$self.$$set = ($$props2) => {
     if ("props" in $$props2)
       $$invalidate(0, props = $$props2.props);
+    if ("handleConfirmed" in $$props2)
+      $$invalidate(1, handleConfirmed = $$props2.handleConfirmed);
+    if ("handleDenied" in $$props2)
+      $$invalidate(2, handleDenied = $$props2.handleDenied);
   };
-  $$self.$$.update = () => {
-    if ($$self.$$.dirty & 1) {
-      props && dataToSign && transaction && checkTx();
-    }
-  };
-  return [
-    props,
-    defConf,
-    checksOut,
-    transaction,
-    tags,
-    defaultconfirmation_binding,
-    confirmed_handler
-  ];
+  return [props, handleConfirmed, handleDenied, transaction, tags];
 }
 class ArweaveSign extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance$4, create_fragment$4, safe_not_equal, { props: 0 });
+    init(this, options, instance$4, create_fragment$4, safe_not_equal, {
+      props: 0,
+      handleConfirmed: 1,
+      handleDenied: 2
+    });
   }
 }
 var Sign_svelte_svelte_type_style_lang = "";
@@ -4753,10 +4724,10 @@ function create_fragment$2(ctx) {
       t3 = space();
       div1 = element("div");
       button0 = element("button");
-      t4 = text("No");
+      t4 = text("Yes");
       t5 = space();
       button1 = element("button");
-      t6 = text("Yes");
+      t6 = text("No");
       this.h();
     },
     l(nodes) {
@@ -4773,12 +4744,12 @@ function create_fragment$2(ctx) {
       var div1_nodes = children(div1);
       button0 = claim_element(div1_nodes, "BUTTON", { class: true });
       var button0_nodes = children(button0);
-      t4 = claim_text(button0_nodes, "No");
+      t4 = claim_text(button0_nodes, "Yes");
       button0_nodes.forEach(detach);
       t5 = claim_space(div1_nodes);
       button1 = claim_element(div1_nodes, "BUTTON", { class: true });
       var button1_nodes = children(button1);
-      t6 = claim_text(button1_nodes, "Yes");
+      t6 = claim_text(button1_nodes, "No");
       button1_nodes.forEach(detach);
       div1_nodes.forEach(detach);
       div2_nodes.forEach(detach);
@@ -4786,8 +4757,8 @@ function create_fragment$2(ctx) {
     },
     h() {
       attr(div0, "class", "svelte-rd2cdl");
-      attr(button0, "class", "yellow");
-      attr(button1, "class", "green");
+      attr(button0, "class", "green");
+      attr(button1, "class", "yellow");
       attr(div1, "class", "submit svelte-rd2cdl");
       attr(div2, "class", "attention svelte-rd2cdl");
     },
@@ -4807,12 +4778,12 @@ function create_fragment$2(ctx) {
       if (!mounted) {
         dispose = [
           listen(button0, "click", prevent_default(function() {
-            if (is_function(ctx[2]))
-              ctx[2].apply(this, arguments);
-          })),
-          listen(button1, "click", prevent_default(function() {
             if (is_function(ctx[1]))
               ctx[1].apply(this, arguments);
+          })),
+          listen(button1, "click", prevent_default(function() {
+            if (is_function(ctx[2]))
+              ctx[2].apply(this, arguments);
           }))
         ];
         mounted = true;
@@ -4861,7 +4832,7 @@ class Decrypt extends SvelteComponent {
 let confirmationComponents = {
   Default: { component: DefaultConfirmation }
 };
-for (const [key, value] of Object.entries(cA)) {
+for (const [key, value] of Object.entries(handlers)) {
   confirmationComponents[key] = { component: DefaultConfirmation };
 }
 let customizedComponents = {
@@ -4886,7 +4857,11 @@ confirmationComponents = __spreadValues(__spreadValues({}, confirmationComponent
 var Confirmer_svelte_svelte_type_style_lang = "";
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[5] = list[i];
+  child_ctx[5] = list[i].component;
+  child_ctx[6] = list[i].confirmSection;
+  child_ctx[7] = list[i].params;
+  child_ctx[8] = list[i].handleConfirmed;
+  child_ctx[9] = list[i].handleDenied;
   return child_ctx;
 }
 function create_if_block$1(ctx) {
@@ -4966,23 +4941,20 @@ function create_if_block$1(ctx) {
   };
 }
 function create_each_block(ctx) {
-  let t0_value = console.log("raw", { request: ctx[5] }) + "";
-  let t0;
-  let t1;
   let div;
   let switch_instance;
-  let t2;
+  let t;
   let current;
-  var switch_value = ctx[5].component.component;
+  var switch_value = ctx[5].component;
   function switch_props(ctx2) {
     return {
       props: {
         props: {
-          method: ctx2[5].confirmSection,
-          params: ctx2[5].params
+          method: ctx2[6],
+          params: ctx2[7]
         },
-        handleConfirmed: ctx2[5].handleConfirmed,
-        handleDenied: ctx2[5].handleDenied
+        handleConfirmed: ctx2[8],
+        handleDenied: ctx2[9]
       }
     };
   }
@@ -4991,22 +4963,18 @@ function create_each_block(ctx) {
   }
   return {
     c() {
-      t0 = text(t0_value);
-      t1 = space();
       div = element("div");
       if (switch_instance)
         create_component(switch_instance.$$.fragment);
-      t2 = space();
+      t = space();
       this.h();
     },
     l(nodes) {
-      t0 = claim_text(nodes, t0_value);
-      t1 = claim_space(nodes);
       div = claim_element(nodes, "DIV", { class: true });
       var div_nodes = children(div);
       if (switch_instance)
         claim_component(switch_instance.$$.fragment, div_nodes);
-      t2 = claim_space(div_nodes);
+      t = claim_space(div_nodes);
       div_nodes.forEach(detach);
       this.h();
     },
@@ -5014,29 +4982,25 @@ function create_each_block(ctx) {
       attr(div, "class", "active svelte-97zfr5");
     },
     m(target, anchor) {
-      insert_hydration(target, t0, anchor);
-      insert_hydration(target, t1, anchor);
       insert_hydration(target, div, anchor);
       if (switch_instance) {
         mount_component(switch_instance, div, null);
       }
-      append_hydration(div, t2);
+      append_hydration(div, t);
       current = true;
     },
     p(ctx2, dirty) {
-      if ((!current || dirty & 1) && t0_value !== (t0_value = console.log("raw", { request: ctx2[5] }) + ""))
-        set_data(t0, t0_value);
       const switch_instance_changes = {};
       if (dirty & 1)
         switch_instance_changes.props = {
-          method: ctx2[5].confirmSection,
-          params: ctx2[5].params
+          method: ctx2[6],
+          params: ctx2[7]
         };
       if (dirty & 1)
-        switch_instance_changes.handleConfirmed = ctx2[5].handleConfirmed;
+        switch_instance_changes.handleConfirmed = ctx2[8];
       if (dirty & 1)
-        switch_instance_changes.handleDenied = ctx2[5].handleDenied;
-      if (switch_value !== (switch_value = ctx2[5].component.component)) {
+        switch_instance_changes.handleDenied = ctx2[9];
+      if (switch_value !== (switch_value = ctx2[5].component)) {
         if (switch_instance) {
           group_outros();
           const old_component = switch_instance;
@@ -5049,7 +5013,7 @@ function create_each_block(ctx) {
           switch_instance = new switch_value(switch_props(ctx2));
           create_component(switch_instance.$$.fragment);
           transition_in(switch_instance.$$.fragment, 1);
-          mount_component(switch_instance, div, t2);
+          mount_component(switch_instance, div, t);
         } else {
           switch_instance = null;
         }
@@ -5070,10 +5034,6 @@ function create_each_block(ctx) {
       current = false;
     },
     d(detaching) {
-      if (detaching)
-        detach(t0);
-      if (detaching)
-        detach(t1);
       if (detaching)
         detach(div);
       if (switch_instance)
@@ -5170,11 +5130,10 @@ function instance$1($$self, $$props, $$invalidate) {
           hide();
       }
       $$invalidate(0, requests = [...requests, thisRequest]);
-      console.log({ requests });
       show();
     });
   };
-  cA.setConfig("confirm", confirm);
+  handlers.setConfig("confirm", confirm);
   $$self.$$set = ($$props2) => {
     if ("show" in $$props2)
       $$invalidate(1, show = $$props2.show);
@@ -5880,4 +5839,4 @@ class Routes extends SvelteComponent {
   }
 }
 export { Routes as default };
-//# sourceMappingURL=index.svelte-5ea8fed8.js.map
+//# sourceMappingURL=index.svelte-94bad526.js.map
