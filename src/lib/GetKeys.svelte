@@ -27,10 +27,11 @@
 			creating = 'Creating keypairs...';
 
 			const mnemonic = await internals.generateMnemonic();
+			const rsajwk = await internals.generateRsaJwk();
 
 			// save to storedValue.
 			// TODO: offer password protection/encryption?
-			$storedValue = { ...$storedValue, mnemonic };
+			$storedValue = { ...$storedValue, mnemonic, rsajwk };
 
 			creating += '<br/>Created mnemonic.';
 			creating += `<br/>${mnemonic}`;
@@ -41,9 +42,8 @@
 	$: if ($storedValue && $storedValue.mnemonic) loadKeys(); // load keys once there is a storedValue
 
 	async function loadKeys() {
-		// console.log('LOADING KEYS into Proxcryptor...');
-		await internals.loadMnemonicInProxcryptor($storedValue.mnemonic); // let proxcryptorName =
-		// console.log('LOADED KEYS into Proxcryptor...');
+		await internals.loadSecrets({ mnemonic: $storedValue.mnemonic, rsajwk: $storedValue.rsajwk });
+
 		dispatch('loadedKeys', 'details'); // let parent component know
 		keys = getLoadedKeys(); // get all proxcryptor public key info
 	}
