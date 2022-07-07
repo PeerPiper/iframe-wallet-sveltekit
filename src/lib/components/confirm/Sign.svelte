@@ -22,8 +22,8 @@
 		⚠️ Sign this transaction?
 	</div>
 	<div class="submit">
-		<button class="yellow" on:click|preventDefault={handleDenied}>No</button>
 		<button class="green" on:click|preventDefault={handleConfirmed}>Yes</button>
+		<button class="yellow" on:click|preventDefault={handleDenied}>No</button>
 	</div>
 </div>
 
