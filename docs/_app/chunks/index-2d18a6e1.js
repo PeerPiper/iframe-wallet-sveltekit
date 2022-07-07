@@ -1219,17 +1219,6 @@ function __generator(thisArg, body) {
     return { value: op[0] ? op[1] : void 0, done: true };
   }
 }
-function __spreadArray(to, from, pack) {
-  if (pack || arguments.length === 2)
-    for (var i = 0, l = from.length, ar; i < l; i++) {
-      if (ar || !(i in from)) {
-        if (!ar)
-          ar = Array.prototype.slice.call(from, 0, i);
-        ar[i] = from[i];
-      }
-    }
-  return to.concat(ar || Array.prototype.slice.call(from));
-}
 var __extends = commonjsGlobal && commonjsGlobal.__extends || function() {
   var extendStatics2 = function(d, b) {
     extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
@@ -3380,12 +3369,6 @@ var arweaveWalletAPI = {
             return [4, generateJWK()];
           case 1:
             jwk = _a.sent();
-            return [
-              4,
-              ownerToAddress(jwk.n)
-            ];
-          case 2:
-            _a.sent();
             return [2, jwk];
         }
       });
@@ -3462,7 +3445,6 @@ var arweaveWalletAPI = {
   sign: function(transaction, options) {
     return __awaiter(this, void 0, void 0, function() {
       var methodName, confirmed, address, jwk, tx, dataToSign, rawSignature, id2;
-      var _this = this;
       return __generator(this, function(_a) {
         switch (_a.label) {
           case 0:
@@ -3479,48 +3461,20 @@ var arweaveWalletAPI = {
           case 2:
             address = _a.sent();
             rsa.forEach(function(value, key, map) {
-              if (value.kty == "RSA") {
+              if (value.kty == "RSA" && (value === null || value === void 0 ? void 0 : value.kid) == address) {
                 jwk = value;
               }
             });
-            return [
-              4,
-              Promise.all(__spreadArray([], rsa.entries(), true).map(function(_a2) {
-                _a2[0];
-                var value = _a2[1];
-                return __awaiter(_this, void 0, void 0, function() {
-                  var addr;
-                  return __generator(this, function(_b) {
-                    switch (_b.label) {
-                      case 0:
-                        if (!((value === null || value === void 0 ? void 0 : value.kty) === "RSA"))
-                          return [3, 2];
-                        return [4, ownerToAddress(value.n)];
-                      case 1:
-                        addr = _b.sent();
-                        if (addr == address) {
-                          jwk = value;
-                        }
-                        _b.label = 2;
-                      case 2:
-                        return [2];
-                    }
-                  });
-                });
-              }))
-            ];
-          case 3:
-            _a.sent();
             tx = new Transaction(transaction);
             tx.setOwner(jwk.n);
             return [4, tx.getSignatureData()];
-          case 4:
+          case 3:
             dataToSign = _a.sent();
             return [4, subtleSign(jwk, dataToSign, options)];
-          case 5:
+          case 4:
             rawSignature = _a.sent();
             return [4, crypto.subtle.digest("SHA-256", rawSignature)];
-          case 6:
+          case 5:
             id2 = _a.sent();
             tx.setSignature({
               id: bufferTob64Url(id2),
@@ -3703,7 +3657,6 @@ var getLoadedKeys = function() {
       publicKeyBase58: null
     });
   });
-  console.log({ rsa, results });
   return results;
 };
 var index = /* @__PURE__ */ Object.freeze({
@@ -3928,4 +3881,4 @@ var Connection = function() {
   return Connection2;
 }();
 export { CONSTANTS, Connection, handlers, index as internals };
-//# sourceMappingURL=index-7a951cd6.js.map
+//# sourceMappingURL=index-2d18a6e1.js.map

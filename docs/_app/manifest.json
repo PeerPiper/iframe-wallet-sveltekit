@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-1a709630.js",
+    "file": "start-51134401.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -19,7 +19,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-9064964b.js",
+    "file": "pages/__layout.svelte-ab2844c4.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -55,7 +55,7 @@
     ]
   },
   "src/routes/add.svelte": {
-    "file": "pages/add.svelte-eb5f6b90.js",
+    "file": "pages/add.svelte-372c8a2a.js",
     "src": "src/routes/add.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -81,7 +81,7 @@
     ]
   },
   "src/routes/connect.svelte": {
-    "file": "pages/connect.svelte-5b4ff70d.js",
+    "file": "pages/connect.svelte-6d3233e9.js",
     "src": "src/routes/connect.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -104,7 +104,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-1f792d2d.js",
+    "file": "pages/index.svelte-8cef8527.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -190,7 +190,7 @@
     ]
   },
   "node_modules/@peerpiper/iframe-wallet-engine/dist/index.mjs": {
-    "file": "chunks/index-7a951cd6.js",
+    "file": "chunks/index-2d18a6e1.js",
     "src": "node_modules/@peerpiper/iframe-wallet-engine/dist/index.mjs",
     "isDynamicEntry": true
   },

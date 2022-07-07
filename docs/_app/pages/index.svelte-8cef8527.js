@@ -19,7 +19,7 @@ var __spreadValues = (a, b) => {
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 import { __vitePreload } from "../chunks/preload-helper-c37781a6.js";
 import { SvelteComponent, init, safe_not_equal, empty, insert_hydration, group_outros, transition_out, check_outros, transition_in, detach, element, claim_element, children, attr, listen, is_function, component_subscribe, onMount, set_store_value, globals, text, claim_text, append_hydration, prevent_default, set_data, noop, create_slot, update_slot_base, get_all_dirty_from_scope, get_slot_changes, space, claim_space, binding_callbacks, svg_element, claim_svg_element, add_render_callback, create_in_transition, create_out_transition, create_component, claim_component, mount_component, destroy_component, destroy_each, createEventDispatcher, HtmlTagHydration, claim_html_tag, set_style, add_resize_listener, run_all, bubble, null_to_empty } from "../chunks/index-4df20881.js";
-import { CONSTANTS, internals as index, handlers } from "../chunks/index-7a951cd6.js";
+import { CONSTANTS, internals as index, handlers } from "../chunks/index-2d18a6e1.js";
 import { writable } from "../chunks/index-5327d83b.js";
 import { fade } from "../chunks/index-fc89d724.js";
 const storedValue = writable();
@@ -1724,7 +1724,7 @@ function instance$9($$self, $$props, $$invalidate) {
     setWidth: (w) => $$invalidate(2, width = w)
   };
   onMount(async () => {
-    ({ Connection } = await __vitePreload(() => import("../chunks/index-7a951cd6.js"), true ? [] : void 0));
+    ({ Connection } = await __vitePreload(() => import("../chunks/index-2d18a6e1.js"), true ? [] : void 0));
     const connection = new Connection();
     $$invalidate(6, connector = await connection.init(optionalHandlers));
     $$invalidate(3, walletReady = async () => {
@@ -4601,10 +4601,10 @@ function create_fragment$3(ctx) {
       t1 = space();
       div1 = element("div");
       button0 = element("button");
-      t2 = text("No");
+      t2 = text("Yes");
       t3 = space();
       button1 = element("button");
-      t4 = text("Yes");
+      t4 = text("No");
       this.h();
     },
     l(nodes) {
@@ -4619,12 +4619,12 @@ function create_fragment$3(ctx) {
       var div1_nodes = children(div1);
       button0 = claim_element(div1_nodes, "BUTTON", { class: true });
       var button0_nodes = children(button0);
-      t2 = claim_text(button0_nodes, "No");
+      t2 = claim_text(button0_nodes, "Yes");
       button0_nodes.forEach(detach);
       t3 = claim_space(div1_nodes);
       button1 = claim_element(div1_nodes, "BUTTON", { class: true });
       var button1_nodes = children(button1);
-      t4 = claim_text(button1_nodes, "Yes");
+      t4 = claim_text(button1_nodes, "No");
       button1_nodes.forEach(detach);
       div1_nodes.forEach(detach);
       div2_nodes.forEach(detach);
@@ -4632,8 +4632,8 @@ function create_fragment$3(ctx) {
     },
     h() {
       attr(div0, "class", "svelte-rd2cdl");
-      attr(button0, "class", "yellow");
-      attr(button1, "class", "green");
+      attr(button0, "class", "green");
+      attr(button1, "class", "yellow");
       attr(div1, "class", "submit svelte-rd2cdl");
       attr(div2, "class", "attention svelte-rd2cdl");
     },
@@ -4651,12 +4651,12 @@ function create_fragment$3(ctx) {
       if (!mounted) {
         dispose = [
           listen(button0, "click", prevent_default(function() {
-            if (is_function(ctx[1]))
-              ctx[1].apply(this, arguments);
-          })),
-          listen(button1, "click", prevent_default(function() {
             if (is_function(ctx[0]))
               ctx[0].apply(this, arguments);
+          })),
+          listen(button1, "click", prevent_default(function() {
+            if (is_function(ctx[1]))
+              ctx[1].apply(this, arguments);
           }))
         ];
         mounted = true;
@@ -5843,4 +5843,4 @@ class Routes extends SvelteComponent {
   }
 }
 export { Routes as default };
-//# sourceMappingURL=index.svelte-1f792d2d.js.map
+//# sourceMappingURL=index.svelte-8cef8527.js.map
