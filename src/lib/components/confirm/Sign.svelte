@@ -1,4 +1,5 @@
 <script>
+	import Button from '../atomic/Button.svelte';
 	import DefaultConfirmation from './DefaultConfirmation.svelte';
 
 	export let props;
@@ -13,30 +14,16 @@
 
 <!-- on:confirmed on:denied -- they just forward the event notification up to <Confirmer /> -->
 <!-- https://svelte.dev/tutorial/event-forwarding -->
-<div class="attention">
+<div class="flex flex-col bg-yellow-100 drop-shadow-lg rounded-sm w-auto p-6">
 	<!-- this is default content, override with slot -->
-	<div>
+	<div class="flex-1">
 		<!-- JSON.stringify(, null, 2)   decoder.decode()-->
 		<!-- {props.params.toString()}  -->
 		<!-- TODO: Data layouts for confirmer  -->
 		⚠️ Sign this transaction?
 	</div>
-	<div class="submit">
-		<button class="green" on:click|preventDefault={handleConfirmed}>Yes</button>
-		<button class="yellow" on:click|preventDefault={handleDenied}>No</button>
+	<div class="flex-1 p-4">
+		<Button type={'Yes'} clickHandler={handleConfirmed}>Yes</Button>
+		<Button type={'No'} clickHandler={handleDenied}>No</Button>
 	</div>
 </div>
-
-<style>
-	div.attention {
-		display: flex;
-		flex-direction: column;
-		background-color: #fff9c4;
-		filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
-		width: 100%;
-	}
-	div {
-		padding: 0.3em;
-		margin: 0.3em;
-	}
-</style>

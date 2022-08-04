@@ -1,7 +1,10 @@
 <script>
+	// @ts-nocheck
+
 	import { onMount } from 'svelte';
 	import { CONSTANTS } from '@peerpiper/iframe-wallet-engine';
 	import { storedValue } from '$lib/stores';
+	import Button from '$lib/components/atomic/Button.svelte';
 
 	export let mounted;
 
@@ -55,31 +58,16 @@
 
 <svelte:window on:message={handleMessage} />
 
-<div class="connector">
+<div class="connector flex flex-col min-h-full items-center justify-center flex-nowrap">
 	{#if mounted}
 		{#if $storedValue}
 			<slot />
 		{:else}
 			<div>
-				<button
-					disabled={connecting}
-					class={connecting ? 'yellow' : 'ready'}
-					on:click|preventDefault={openTwinWindow}
-					>{connecting ? 'Authorize from Main Wallet Window' : 'Connect'}</button
+				<Button type={connecting ? 'Connecting' : ''} clickHandler={openTwinWindow}
+					>{connecting ? 'Connecting' : 'Connect'}</Button
 				>
 			</div>
 		{/if}
 	{/if}
 </div>
-
-<style>
-	.connector {
-		display: flex;
-		min-height: 100%;
-		/* margin: 1em; */
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		flex-wrap: nowrap;
-	}
-</style>

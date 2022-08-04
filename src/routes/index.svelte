@@ -1,13 +1,15 @@
+<script context="module" lang="ts">
+	export const prerender = true;
+</script>
+
 <script>
-	import { onMount, setContext } from 'svelte';
+	import { onMount } from 'svelte';
 	import Connector from '$lib/Connector.svelte';
 	import GetKeys from '$lib/GetKeys.svelte';
 	import { storedValue } from '$lib/stores';
 	import AutoSizer from '$lib/AutoSizer.svelte';
 	import Opened from '$lib/Opened.svelte';
 	import Confirmer from '$lib/Confirmer.svelte';
-
-	import Manager from '$lib/Manager.svelte';
 
 	const STORED_VALUE = 'STORED_VALUE';
 	const def = null;
@@ -42,44 +44,29 @@
 </script>
 
 <!-- Based on whether this is the Window.Top (not an iframe) or a Child (iframe) depends on which to show: -->
-{#if window == window.top}
+{#if ImmortalDB && window == window.top}
 	<!-- NOT an iframe  -->
-	<div class="top-wrapper">
+	<div class="m-2">
 		{#if mounted && syncing}
 			<!-- Opened handles on:loadedKeys by ALSO syncing them with the opener window -->
 			<Opened let:syncKeys>
-				<Manager>
-					{#if syncKeys}
-						<GetKeys on:loadedKeys on:loadedKeys={syncKeys} />
-					{/if}
-				</Manager>
+				{#if syncKeys}
+					<GetKeys on:loadedKeys on:loadedKeys={syncKeys} />
+				{/if}
 			</Opened>
 		{:else}
-			<!-- Manager handles on:loadedKeys ONLY by saving them to storage -->
-			<Manager>
-				<GetKeys on:loadedKeys />
-			</Manager>
+			<GetKeys on:loadedKeys />
 		{/if}
 	</div>
-{:else}
+{:else if ImmortalDB}
 	<!-- Auto-resize embedded iframe -->
 	<AutoSizer let:walletReady let:show let:hide>
 		<!-- walletReady gets passed from AutoSizer to GetKeys -->
 		<Connector {mounted}>
 			<Confirmer {show} {hide} />
-			<Manager>
-				{#if walletReady}
-					<GetKeys on:loadedKeys={walletReady} />
-				{/if}
-			</Manager>
+			{#if walletReady}
+				<GetKeys on:loadedKeys={walletReady} />
+			{/if}
 		</Connector>
 	</AutoSizer>
 {/if}
-
-<!-- Note: Don't style outside of the AutoSizer, or else the sizes in the ifram will be all messed up -->
-<style>
-	.top-wrapper {
-		margin: 1.618em;
-		padding: 1.618em;
-	}
-</style>

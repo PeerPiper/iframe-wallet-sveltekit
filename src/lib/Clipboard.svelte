@@ -1,4 +1,5 @@
 <script>
+	// @ts-nocheck
 	import { fade } from 'svelte/transition';
 
 	export let value = null;
@@ -18,9 +19,6 @@
 
 <!-- Clipboard  -->
 <div class="Clipboard-Container" on:click={copy}>
-	<div class="Clipboard" bind:this={clip}>
-		<slot {copy} />
-	</div>
 	{#if copied}
 		<div out:fade={{ duration }}>✔️Copied</div>
 	{:else}
@@ -33,6 +31,7 @@
 				width="14"
 				height="16"
 				aria-hidden="true"
+				stroke="currentColor"
 			>
 				<title>Copy to clipboard</title>
 				<path
@@ -42,23 +41,15 @@
 			</svg>
 		</div>
 	{/if}
+	<div class="Clipboard" bind:this={clip}>
+		<slot {copy} />
+	</div>
 </div>
 
 <style>
-	textarea {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 2em;
-		height: 2em;
-		padding: 0;
-		border: none;
-		outline: none;
-		box-shadow: none;
-		background: transparent;
-	}
 	.Clipboard {
 		margin: 0 0.5em;
+		word-break: break-all;
 	}
 	.Clipboard-Container {
 		display: flex;
@@ -70,7 +61,6 @@
 	svg {
 		cursor: pointer;
 		background-color: transparent;
-		stroke: var(--font-color);
 		fill: transparent;
 		width: auto;
 		height: 1.5em;

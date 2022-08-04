@@ -1,6 +1,5 @@
 <script>
-	import { createEventDispatcher } from 'svelte';
-
+	// @ts-nocheck
 	export let props;
 	export let handleConfirmed;
 	export let handleDenied;
@@ -13,8 +12,8 @@
 				⚠️ Authorize {props.method} from your wallet?
 			</div>
 			<div class="submit">
-				<button class="green" on:click={handleConfirmed}>Yes</button>
-				<button class="yellow" on:click={handleDenied}>No</button>
+				<Button type={'Yes'} clickHandler={handleConfirmed}>Yes</Button>
+				<Button type={'No'} clickHandler={handleDenied}>No</Button>
 			</div>
 		</div>
 	</div>
@@ -72,10 +71,6 @@
 
 	button.yellow {
 		background-color: rgba(230, 226, 10, 0.82) !important;
-	}
-
-	button.ready {
-		background-color: rgb(47, 137, 255, 0.82);
 	}
 
 	button.green {

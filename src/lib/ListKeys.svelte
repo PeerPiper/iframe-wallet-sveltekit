@@ -1,7 +1,9 @@
 <script>
+	// @ts-nocheck
+
 	// show the user's keys
 	// parse out the JWKs into types: RSA and Ed25519 according to JWK
-	import { shorten } from '$lib/utils';
+	import { shorten, bufftoHex } from '$lib/utils';
 	import Clipboard from './Clipboard.svelte';
 
 	export let keys;
@@ -11,27 +13,27 @@
 </script>
 
 {#if keys && keys.length > 0}
-	<div class="card">
+	<div class="card text-toxic shadow-md shadow-toxic/50 rounded-lg p-4 m-4 w-auto bg-neutral-800">
 		{#if keys.filter((k) => k.publicKeyJWK.kty == 'RSA').length}
-			<div class="keylist">
+			<div class="keylist overflow-hidden">
 				<div class="row left">
 					<span>Arweave</span>
 				</div>
 				<div class="row list-group">
-					<ul>
-						{#each keys.filter((k) => k.publicKeyJWK.kty == 'RSA') as rsaJWK}
-							<li
+					{#each keys.filter((k) => k.publicKeyJWK.kty == 'RSA') as rsaJWK}
+						<div class="flex flex-col">
+							<div
 								class="{collapsed && selectedRSA != rsaJWK.kid
 									? 'hide'
 									: ''} list-group-item list-group-item-action "
 							>
 								{rsaJWK.name}
-								<Clipboard>
-									{rsaJWK.publicKeyJWK.kid}</Clipboard
-								>
-							</li>
-						{/each}
-					</ul>
+							</div>
+							<div class="flex-1">
+								Base64URL: <Clipboard>{rsaJWK.publicKeyJWK.kid}</Clipboard>
+							</div>
+						</div>
+					{/each}
 				</div>
 			</div>
 		{/if}
@@ -46,13 +48,16 @@
 							<li class=" list-group-item list-group-item-action ">
 								{shorten(edJWK.name)}
 								<div class="full-pubKey">
-									<Clipboard>{edJWK.publicKeyJWK.x}</Clipboard>
+									Base64URL: <Clipboard>{edJWK.publicKeyJWK.x}</Clipboard>
 								</div>
 								<div class="full-pubKey">
-									<Clipboard>{edJWK.publicKeyBase58}</Clipboard>
+									Base58: <Clipboard>{edJWK.publicKeyBase58}</Clipboard>
 								</div>
 								<div class="full-pubKey">
-									<Clipboard>{edJWK.publicKey}</Clipboard>
+									Hex: <Clipboard>{bufftoHex(edJWK.publicKey)}</Clipboard>
+								</div>
+								<div class="full-pubKey">
+									Bytes: <Clipboard>{edJWK.publicKey}</Clipboard>
 								</div>
 							</li>
 							<!-- <b>{shorten(key?.publicKeyBase58)}</b><br /> -->
@@ -65,24 +70,11 @@
 {/if}
 
 <style>
-	div {
-		--font-color: #0eff02;
-	}
 	.full-pubKey {
 		/* display: none; */
 		text-overflow: ellipsis;
 	}
-	.card {
-		margin: 1em 0em;
-		background-color: rgb(35, 35, 35);
-		padding: 1.5em;
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;
-		box-shadow: 2px 2px 6px rgba(14, 255, 2, 0.7);
-		color: var(--font-color);
-		width: 100%;
-	}
+
 	.keylist {
 		display: flex;
 		flex-direction: row;
@@ -90,7 +82,6 @@
 		justify-content: flex-start;
 		align-items: stretch;
 		align-content: stretch;
-		border-width: 2px;
 		border-bottom: 1px #d6e7df solid;
 		padding-bottom: 4px;
 		margin-bottom: 4px;

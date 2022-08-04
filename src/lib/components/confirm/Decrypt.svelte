@@ -1,4 +1,6 @@
 <script>
+	import Button from '../atomic/Button.svelte';
+
 	export let props;
 	export let handleConfirmed;
 	export let handleDenied;
@@ -16,8 +18,8 @@
 		⚠️ Decrypt {decoder.decode(props.params.tag)}?
 	</div>
 	<div class="submit">
-		<button class="green" on:click|preventDefault={handleConfirmed}>Yes</button>
-		<button class="yellow" on:click|preventDefault={handleDenied}>No</button>
+		<Button type={'Yes'} clickHandler={handleConfirmed}>Yes</Button>
+		<Button type={'No'} clickHandler={handleDenied}>No</Button>
 	</div>
 </div>
 

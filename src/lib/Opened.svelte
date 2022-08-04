@@ -3,9 +3,6 @@
 	import { CONSTANTS, internals } from '@peerpiper/iframe-wallet-engine';
 	import { storedValue } from '$lib/stores';
 
-	import GetKeys from '$lib/GetKeys.svelte';
-	import Manager from '$lib/Manager.svelte';
-
 	let keyDetails;
 	let mounted;
 

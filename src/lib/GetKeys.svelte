@@ -8,7 +8,6 @@
 	keys get saved to $storedValue which trigger the ImmortalDB saved
 	*/
 	import { onMount, createEventDispatcher } from 'svelte';
-	import { keypairs } from '$lib/stores';
 	import { storedValue } from '$lib/stores';
 
 	import { internals } from '@peerpiper/iframe-wallet-engine';
@@ -55,9 +54,12 @@
 
 {#if $storedValue !== undefined && $storedValue === null}
 	<!-- Show "Create Keys" if no keys exist, no matter what page is showing -- toolbar? -->
-	<div class="submit attention">
+	<div class="submit flex flex-col text-black bg-yellow-300 shadow p-8 m-4 rounded w-fit">
 		No keypairs detected in this browser. Create or Import them:
-		<button class={'green'} on:click={handleGenerateKeypair}>Create New Keypairs</button>
+		<button
+			class="bg-green-500 rounded shadow-lg shadow-slate-600/50 p-4 w-fit m-4 text-white"
+			on:click={handleGenerateKeypair}>Create New Keypairs</button
+		>
 		{@html creating}
 	</div>
 {:else}

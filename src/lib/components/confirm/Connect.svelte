@@ -13,7 +13,7 @@
 			⚠️ Allow {p.params.origin} to see your <b>Public</b> Key?
 		</div>
 		<div class="submit">
-			<button on:click|preventDefault={defConf.handleConfirm}>Yes</button>
+			<Button type={'Yes'} clickHandler={defConf.handleConfirm}>Yes</Button>
 		</div>
 	</div>
 </DefaultConfirmation>

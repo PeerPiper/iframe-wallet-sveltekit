@@ -43,8 +43,8 @@ let:props={p} gets them back up from the <DefaultConfirmation> slot
 			).toFixed(5)})<br />
 		</div>
 		<div class="submit">
-			<button class="green" on:click|preventDefault={handleConfirmed}>Yes</button>
-			<button class="yellow" on:click|preventDefault={handleDenied}>Cancel</button>
+			<Button type={'Yes'} clickHandler={handleConfirmed}>Yes</Button>
+			<Button type={'No'} clickHandler={handleDenied}>No</Button>
 		</div>
 	</div>
 {/if}
