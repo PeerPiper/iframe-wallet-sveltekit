@@ -19,7 +19,7 @@ const config = {
 			default: true // creates index.html on build folder
 		},
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/iframe-wallet-kit' : ''
+			base: process.env.NODE_ENV === 'production' ? '/iframe-wallet-sveltekit' : ''
 		},
 
 		// Override http methods in the Todo forms
